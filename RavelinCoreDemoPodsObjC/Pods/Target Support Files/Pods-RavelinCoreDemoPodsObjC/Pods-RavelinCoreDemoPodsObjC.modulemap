@@ -1,0 +1,6 @@
+framework module Pods_RavelinCoreDemoPodsObjC {
+  umbrella header "Pods-RavelinCoreDemoPodsObjC-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - RavelinCore (1.1.0)
+
+DEPENDENCIES:
+  - RavelinCore (= 1.1.0)
+
+SPEC REPOS:
+  https://github.com/unravelin/Specs.git:
+    - RavelinCore
+
+SPEC CHECKSUMS:
+  RavelinCore: 7c4d93d55b654aed04b69fd1895502a727b4157d
+
+PODFILE CHECKSUM: d05e81f04462daedcca75f32a8147eda186f4f88
+
+COCOAPODS: 1.10.1
