@@ -7,13 +7,16 @@
 #import <RavelinCore/Ravelin.h>
 @interface ViewController ()
 @property (strong, nonatomic) Ravelin *ravelin;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.view.backgroundColor = UIColor.lightGrayColor;
+    self.textField.delegate = self;
+    
     // Make Ravelin instance with api keys
     self.ravelin = [Ravelin createInstance:@"publishable_key_xxxx"];
     
@@ -49,4 +52,22 @@
     // Track a customer logout
     [self.ravelin trackLogout:@"logoutPage"];
 }
+
+
+- (BOOL)textField:(UITextField *)iTextField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    // avoid checking the pasteboard when a user is typing and only adding a single character at a time
+    if(string.length <= 1) { return YES; }
+    // Check if the textfield contains pasted text
+    if([string containsString:[UIPasteboard generalPasteboard].string]) {
+        // Send paste event to Ravelin
+        NSString *pageTitle = @"home";
+        NSString *pasteLength = [NSString stringWithFormat:@"%ld", (long)[UIPasteboard generalPasteboard].string.length];
+        NSDictionary *meta = @{@"pasteLength": pasteLength};
+        [self.ravelin track:pageTitle eventName:@"paste" eventProperties:meta];
+    }
+    
+    return YES;
+}
+
 @end
