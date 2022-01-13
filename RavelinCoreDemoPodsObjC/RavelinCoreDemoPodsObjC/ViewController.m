@@ -18,7 +18,7 @@
     self.textField.delegate = self;
     
     // Make Ravelin instance with api keys
-    self.ravelin = [Ravelin createInstance:@"publishable_key_test_staging_qiQlJ6sNNtv3aWuqG8oquVVgnjgtO35v"];
+    self.ravelin = [Ravelin createInstance:@"publishable_key_xxxx"];
     
     // Setup customer info and track their login
     self.ravelin.customerId = @"customer1234";
