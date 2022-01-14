@@ -5,7 +5,7 @@
 #import <UIKit/UIKit.h>
 #import <RavelinCore/Ravelin.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
 
 @end
 
