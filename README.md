@@ -24,7 +24,7 @@ Add RavelinCore via Xcode, Add Package Dependency:
 a package manifest is available at:
 'git@github.com:unravelin/ravelin-core-ios-xcframework-distribution.git'
 
-SPM support available for versions 1.1.0 and 1.1.1
+SPM support available from version 1.1.0
 
 <img width="487" alt="RavelinCore-SPM" src="https://user-images.githubusercontent.com/729131/121674900-8cc67700-caaa-11eb-8b07-00a3876ec133.png">
 

@@ -17,11 +17,14 @@
     self.view.backgroundColor = UIColor.lightGrayColor;
     self.textField.delegate = self;
     
-    // Make Ravelin instance with api keys
-    self.ravelin = [Ravelin createInstance:@"publishable_key_xxxx"];
-    
+    // make Ravelin instance with api key
+    self.ravelin = [Ravelin
+                    createInstance:@"publishable_key_xxxxxx"];
+}
+
+- (IBAction)touchTrackButton:(id)sender {
     // Setup customer info and track their login
-    self.ravelin.customerId = @"customer1234";
+    self.ravelin.customerId = @"customer12345";
 
     // Send a device fingerprint with a completion block (if required)
     [self.ravelin trackFingerprint:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -47,7 +50,6 @@
         }
     }];
 }
-
 
 - (BOOL)textField:(UITextField *)iTextField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
