@@ -1,7 +1,7 @@
 import RavelinCore
 
 struct UseRavelin {
-    var core : Ravelin
+    var core: Ravelin
 
     init(apiKey: String) {
         core = Ravelin.createInstance(apiKey, enableRetry: false)
