@@ -1,16 +1,16 @@
 PODS:
-  - RavelinCore (1.1.1)
+  - RavelinCore (1.1.2)
 
 DEPENDENCIES:
-  - RavelinCore (= 1.1.1)
+  - RavelinCore (= 1.1.2)
 
 SPEC REPOS:
   https://github.com/unravelin/Specs.git:
     - RavelinCore
 
 SPEC CHECKSUMS:
-  RavelinCore: ed0c434300597fbdfe5e87db4aa0bae03be2a91b
+  RavelinCore: 101d9426f67a39a68efbc6cd537ac84a2a661102
 
-PODFILE CHECKSUM: 33ca7336d53fd42d88d71023ef7bc4bebcfc9a4a
+PODFILE CHECKSUM: a3939d37195a96291e3959ecac52057e615dbd35
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.15.2

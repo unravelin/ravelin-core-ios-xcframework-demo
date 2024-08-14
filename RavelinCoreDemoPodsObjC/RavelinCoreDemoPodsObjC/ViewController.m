@@ -22,15 +22,7 @@
     
     // Setup customer info and track their login
     self.ravelin.customerId = @"customer1234";
-    self.ravelin.orderId = @"web-001";
-    [self.ravelin trackLogin:@"loginPage"];
-    
-    // Track customer moving to a new page
-    [self.ravelin trackPage:@"checkout"];
-    
-    // Send a device fingerprint
-    [self.ravelin trackFingerprint];
-    
+
     // Send a device fingerprint with a completion block (if required)
     [self.ravelin trackFingerprint:^(NSData *data, NSURLResponse *response, NSError *error) {
         if(!error) {
@@ -38,8 +30,14 @@
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
             if (httpResponse.statusCode == 200) {
                 responseData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers|NSJSONReadingAllowFragments error:nil];
-                // Do something with responseData
                 NSLog(@"trackFingerprint - success");
+                // track login
+                [self.ravelin trackLogin:@"login"];
+                self.ravelin.orderId = @"web-001";
+                // track customer moving to a new page
+                [self.ravelin trackPage:@"checkout"];
+                // track logout
+                [self.ravelin trackLogout:@"logout"];
             } else {
                 // Status was not 200. Handle failure
                 NSLog(@"trackFingerprint - failure");
@@ -48,9 +46,6 @@
             NSLog(@"%@",error.localizedDescription);
         }
     }];
-    
-    // Track a customer logout
-    [self.ravelin trackLogout:@"logoutPage"];
 }
 
 
