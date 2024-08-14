@@ -1,6 +1,0 @@
-framework module RavelinCore {
-  umbrella header "RavelinCore.h"
-
-  export *
-  module * { export * }
-}

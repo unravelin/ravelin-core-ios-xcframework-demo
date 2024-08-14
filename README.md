@@ -14,7 +14,7 @@
 
 Add RavelinCore to your PodFile: 
 ```ruby
-pod 'RavelinCore', '1.1.1', :source => 'https://github.com/unravelin/Specs.git'
+pod 'RavelinCore', '1.1.2', :source => 'https://github.com/unravelin/Specs.git'
 ```
 then, from the command line: `pod install`
 
@@ -24,7 +24,7 @@ Add RavelinCore via Xcode, Add Package Dependency:
 a package manifest is available at:
 'git@github.com:unravelin/ravelin-core-ios-xcframework-distribution.git'
 
-SPM support available for versions 1.1.0 and 1.1.1
+SPM support available from version 1.1.0
 
 <img width="487" alt="RavelinCore-SPM" src="https://user-images.githubusercontent.com/729131/121674900-8cc67700-caaa-11eb-8b07-00a3876ec133.png">
 
@@ -207,24 +207,18 @@ __NOTE:__ All Ravelin network methods are asynchronous. Completion blocks are pr
 
 @implementation ViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+     
+    // make Ravelin instance with api key
+    self.ravelin = [Ravelin
+                    createInstance:@"publishable_key_xxxxxx"];
+}
 
-    // Make Ravelin instance with api keys
-    self.ravelin = [Ravelin createInstance:@"publishable_key_live_----"];
-    
+- (IBAction)touchTrackButton:(id)sender {
     // Setup customer info and track their login
-    self.ravelin.customerId = @"customer1234";
-    self.ravelin.orderId = @"web-001";
-    [self.ravelin trackLogin:@"loginPage"];
-    
-    // Track customer moving to a new page
-    [self.ravelin trackPage:@"checkout"];
-    
-    // Send a device fingerprint
-    [self.ravelin trackFingerprint];
-    
+    self.ravelin.customerId = @"customer12345";
+
     // Send a device fingerprint with a completion block (if required)
     [self.ravelin trackFingerprint:^(NSData *data, NSURLResponse *response, NSError *error) {
         if(!error) {
@@ -232,18 +226,22 @@ __NOTE:__ All Ravelin network methods are asynchronous. Completion blocks are pr
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
             if (httpResponse.statusCode == 200) {
                 responseData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers|NSJSONReadingAllowFragments error:nil];
-                // Do something with responseData
-                
+                NSLog(@"trackFingerprint - success");
+                // track login
+                [self.ravelin trackLogin:@"login"];
+                self.ravelin.orderId = @"web-001";
+                // track customer moving to a new page
+                [self.ravelin trackPage:@"checkout"];
+                // track logout
+                [self.ravelin trackLogout:@"logout"];
             } else {
                 // Status was not 200. Handle failure
+                NSLog(@"trackFingerprint - failure");
             }
         } else {
             NSLog(@"%@",error.localizedDescription);
         }
     }];
-    
-    // Track a customer logout
-    [self.ravelin trackLogout:@"logoutPage"];
 }
 @end
 ```
@@ -257,39 +255,36 @@ import RavelinCore
 class ViewController: UIViewController {
 
     // Declare Ravelin Shared Instance with API keys
-    private var ravelin : Ravelin = Ravelin.createInstance("publishable_key_live_----")
+    private var ravelin = Ravelin.createInstance("publishable_key_live_----")
      
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Setup customer info and track their login
-        ravelin.customerId = "customer1234"
-        ravelin.orderId = "web-001"
-        ravelin.trackLogin("loginPage")
-        
-        // Track customer moving to a new page
-        ravelin.trackPage("checkout")
-        
-        // Send a device fingerprint
-        ravelin.trackFingerprint()
-        
+    }
+
+    func track() {
+        // setup customer info
+        ravelin.customerId = "customer0123"
         // Send a device fingerprint with a completion block (if required)
         ravelin.trackFingerprint { (data, response, error) -> Void in
             if let error = error {
-                // Handle error
+                // handle error
                 print("Ravelin error \(error.localizedDescription)")
             } else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
-                    // Handle success
+                    print("success - deviceId: ", self.core.deviceId)
+                    // track a customer login
+                    ravelin.trackLogin("loginPage")
+                    ravelin.orderId = "web-001"
+                    // track customer moving to a new page
+                    ravelin.trackPage("checkout")
+                    // track a customer logout
+                    ravelin.trackLogout("logoutPage")
+                } else {
+                    print("trackFingerprint: \(httpResponse.statusCode)")
                 }
             }
         }
-        
-        // Track a customer logout
-        ravelin.trackLogout("logoutPage")
-
-    }
+    }   
 }
 ```
 
