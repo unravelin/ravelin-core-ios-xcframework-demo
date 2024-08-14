@@ -1,16 +1,15 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "RavelinCore",
-        "repositoryURL": "git@github.com:unravelin/ravelin-core-ios-xcframework-distribution.git",
-        "state": {
-          "branch": null,
-          "revision": "e00d9805939c74863020f20048f9f6d9bde36f55",
-          "version": "1.1.1"
-        }
+  "originHash" : "1cefbbe979a7d57e94d675a38c28ae6df584ae213b57dcdce389dfc5df68a1b1",
+  "pins" : [
+    {
+      "identity" : "ravelin-core-ios-xcframework-distribution",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:unravelin/ravelin-core-ios-xcframework-distribution.git",
+      "state" : {
+        "revision" : "a8d5e08febda7c527845b0864d338a85e4afe13e",
+        "version" : "1.1.2"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 3
 }
