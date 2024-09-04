@@ -3,8 +3,8 @@
 //  RavelinCoreDemoPodsObjC
 
 #import "ViewController.h"
-#import <UIKit/UIKit.h>
-#import <RavelinCore/Ravelin.h>
+
+@import RavelinCore;
 @interface ViewController ()
 @property (strong, nonatomic) Ravelin *ravelin;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -18,8 +18,7 @@
     self.textField.delegate = self;
     
     // make Ravelin instance with api key
-    self.ravelin = [Ravelin
-                    createInstance:@"publishable_key_xxxxxx"];
+    self.ravelin = [Ravelin createInstance:@"local"];
 }
 
 - (IBAction)touchTrackButton:(id)sender {
@@ -48,6 +47,11 @@
         } else {
             NSLog(@"%@",error.localizedDescription);
         }
+    }];
+    
+    [self.ravelin trackFingerprintWithCompletionHandler:^(NSError *error) {
+        [self.ravelin trackLoginEvent:@"" eventProperties:NULL completionHandler:^(NSError *error) {
+        }];
     }];
 }
 
