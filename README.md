@@ -79,15 +79,18 @@ The .netrc file generally resides in the user’s home directory (~/.netrc).
 See:
 https://www.gnu.org/software/inetutils/manual/html_node/The-_002enetrc-file.html
 
-add an entry to .netrc:
+Add an entry to .netrc:
+```
 machine ravelin.mycloudrepo.io
   login <access key as the username>   
   password <secret value as the password> 
-
-for example:
+```
+For example:
+```
 machine ravelin.mycloudrepo.io
   login 123e4567-e89b-12d3-a456-42665544   
   password 4264454-f88d-17d3-c996-123e4567 
+```
 
 Xcode will automatically detect the .netrc file and apply the required Authentication header.
 
