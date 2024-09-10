@@ -215,7 +215,7 @@ self.ravelin = [Ravelin createInstance:@"publishable_key_live_----"];
 
 Once initialised, you can use the `sharedInstance` directly to access methods and properties.
 
-For RavelinCore SDK version 2 and above, a `shared` property is also available and the 'RavelinSDK' can be used in place of 'Ravelin' is preferred.
+For RavelinCore SDK version 2 and above, a `shared` property is also available and the tyepealias 'RavelinSDK' can be used in place of 'Ravelin'.
 
 **Swift**
 ```swift
