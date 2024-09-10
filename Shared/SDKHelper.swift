@@ -3,6 +3,10 @@ import RavelinCore
 struct SDKHelper {
     let ravelinSDK: RavelinSDK
     
+    var isSetup: Bool {
+        ravelinSDK.isSetup
+    }
+    
     init(apiKey: String, customerId: String?, appVersion: String?, ravelinSDK: RavelinSDK = .shared, completion: ((Bool) -> Void)? = nil) {
         self.ravelinSDK = ravelinSDK
         ravelinSDK.configure(apiKey: apiKey, customerId: customerId, appVersion: appVersion) { success in

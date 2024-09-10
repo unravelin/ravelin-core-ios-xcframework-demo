@@ -4,8 +4,12 @@
 
 import UIKit
 
-//let apiKey = "local_http_192.168.0.63_8080_1234"
+// to assist with early stage development/debug
+// execute 'python3 simple_server.py' in a terminal session
+// and use "local" as the apiKey
 let apiKey = "local"
+// for further development and release, replace with your Ravelin Publishable API Key
+// let apiKey = "publishable_key_live_----"
 
 class ViewController: UIViewController {
     
@@ -49,13 +53,13 @@ class ViewController: UIViewController {
     }
     
     func addActivityIndicator() {
-        let viewController = ActivityIndicatorViewController()
-        addChildiVewController(viewController)
-        activityIndicatorViewController = viewController
+        addChildViewController(ActivityIndicatorViewController()) { viewController in
+            self.activityIndicatorViewController = viewController as? ActivityIndicatorViewController
+        }
     }
     
     func removeActivityIndicator(after: Double = 0.5) {
-        removeChildViewController(self.activityIndicatorViewController, after: after) {
+        removeChildViewController(activityIndicatorViewController, after: after) {
             self.activityIndicatorViewController = nil
         }
     }

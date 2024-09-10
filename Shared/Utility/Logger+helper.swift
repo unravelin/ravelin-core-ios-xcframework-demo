@@ -1,16 +1,24 @@
 import OSLog
 
 @available(iOS 14.0.0, *)
-var logger = Logger(subsystem: "com.ravelin.demo", category: "events")
+extension Logger {
+    private static var subsystem = Bundle.main.bundleIdentifier!
+    static let ravelin = Logger(subsystem: subsystem, category: "ravelin")
+}
 
 func logError(_ string: String) {
+#if DEBUG
     if #available(iOS 14.0, *) {
-        logger.error("\(string)")
+        Logger.ravelin.error("\(string)")
     }
+#endif
 }
 
 func logInfo(_ string: String) {
+#if DEBUG
     if #available(iOS 14.0, *) {
-        logger.info("\(string)")
+        Logger.ravelin.info("\(string)")
     }
+#endif
 }
+

@@ -3,6 +3,7 @@ import RavelinCore
 extension RavelinSDK {
     func configure(apiKey: String, customerId: String?, appVersion: String?, completion: ((Bool) -> Void)? = nil) {
         configure(apiKey: apiKey, customerId: customerId, appVersion: appVersion) {result in
+            // n.b. result is a TrackResult not a TrackResponse
             completion?(self.isSetup && self.isValidResult(result))
         }
     }
@@ -17,13 +18,23 @@ extension RavelinSDK {
         }
     }
     
-    func trackCheckout(orderId:  String, completion: ((Bool) -> Void)? = nil) {
+    func trackCheckout(orderId:  String?, completion: ((Bool) -> Void)? = nil) {
         guard isSetup else {
             completion?(false)
             return
         }
         self.orderId = orderId
         trackPage("checkout", eventProperties: nil) {_, response, error in
+            completion?(self.isValidResponse(response, error: error, label: #function))
+        }
+    }
+    
+    func trackSearch(searchValue: String?, completion: ((Bool) -> Void)? = nil) {
+        guard isSetup else {
+            completion?(false)
+            return
+        }
+        trackSearch("search", searchValue: searchValue) {_, response, error in
             completion?(self.isValidResponse(response, error: error, label: #function))
         }
     }

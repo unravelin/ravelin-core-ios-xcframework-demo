@@ -5,7 +5,12 @@
 import SwiftUI
 import RavelinCore
 
+// to assist with early stage development/debug
+// execute 'python3 simple_server.py' in a terminal session
+// and use "local" as the apiKey
 let apiKey = "local"
+// replace with your Ravelin Publishable API Key
+//let apiKey = "publishable_key_live_----"
 
 struct ContentView: View {
     @State private var trackingSet = TrackingSet.none

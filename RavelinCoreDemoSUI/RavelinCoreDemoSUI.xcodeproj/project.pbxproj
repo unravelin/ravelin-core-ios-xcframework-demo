@@ -12,11 +12,9 @@
 		C81784652C88ABC600563705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81784642C88ABC600563705 /* Assets.xcassets */; };
 		C81784692C88ABC600563705 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81784682C88ABC600563705 /* Preview Assets.xcassets */; };
 		C81784712C88AC1100563705 /* RavelinCore in Frameworks */ = {isa = PBXBuildFile; productRef = C81784702C88AC1100563705 /* RavelinCore */; };
-		C81784802C88AC3400563705 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81784722C88AC3400563705 /* ActivityIndicatorViewController.swift */; };
 		C81784812C88AC3400563705 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81784732C88AC3400563705 /* Bundle+version.swift */; };
 		C81784822C88AC3400563705 /* Logger+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81784742C88AC3400563705 /* Logger+helper.swift */; };
 		C81784832C88AC3400563705 /* TrackingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81784752C88AC3400563705 /* TrackingSet.swift */; };
-		C81784842C88AC3400563705 /* UIViewController+addChildiVewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81784762C88AC3400563705 /* UIViewController+addChildiVewController.swift */; };
 		C81784862C88AC3400563705 /* RavelinSDK+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81784792C88AC3400563705 /* RavelinSDK+helper.swift */; };
 		C81784882C88AC3400563705 /* RavelinSDK+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817847B2C88AC3400563705 /* RavelinSDK+utils.swift */; };
 /* End PBXBuildFile section */
@@ -28,11 +26,9 @@
 		C81784642C88ABC600563705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C81784662C88ABC600563705 /* RavelinCoreDemoSUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RavelinCoreDemoSUI.entitlements; sourceTree = "<group>"; };
 		C81784682C88ABC600563705 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C81784722C88AC3400563705 /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		C81784732C88AC3400563705 /* Bundle+version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
 		C81784742C88AC3400563705 /* Logger+helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Logger+helper.swift"; sourceTree = "<group>"; };
 		C81784752C88AC3400563705 /* TrackingSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingSet.swift; sourceTree = "<group>"; };
-		C81784762C88AC3400563705 /* UIViewController+addChildiVewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+addChildiVewController.swift"; sourceTree = "<group>"; };
 		C81784792C88AC3400563705 /* RavelinSDK+helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RavelinSDK+helper.swift"; sourceTree = "<group>"; };
 		C817847B2C88AC3400563705 /* RavelinSDK+utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RavelinSDK+utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,11 +85,9 @@
 		C81784772C88AC3400563705 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				C81784722C88AC3400563705 /* ActivityIndicatorViewController.swift */,
 				C81784732C88AC3400563705 /* Bundle+version.swift */,
 				C81784742C88AC3400563705 /* Logger+helper.swift */,
 				C81784752C88AC3400563705 /* TrackingSet.swift */,
-				C81784762C88AC3400563705 /* UIViewController+addChildiVewController.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -185,10 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C81784842C88AC3400563705 /* UIViewController+addChildiVewController.swift in Sources */,
 				C81784862C88AC3400563705 /* RavelinSDK+helper.swift in Sources */,
 				C81784632C88ABC500563705 /* ContentView.swift in Sources */,
-				C81784802C88AC3400563705 /* ActivityIndicatorViewController.swift in Sources */,
 				C81784822C88AC3400563705 /* Logger+helper.swift in Sources */,
 				C81784832C88AC3400563705 /* TrackingSet.swift in Sources */,
 				C81784812C88AC3400563705 /* Bundle+version.swift in Sources */,
