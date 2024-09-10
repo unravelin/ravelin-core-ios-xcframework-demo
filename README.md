@@ -20,7 +20,7 @@ This repo provides some simple projects, showing the integration and usage of Ra
 Before you can integrate with the Ravelin mobile SDKs for iOS, you will need to:
 
 * Obtain valid API keys which are available in the Ravelin dashboard in the account menu under the Developer option
-* for RavelinCore SDK, version 2 and above, note that authentication credentials are required for [Installation](#installing-the-ravelin-ios-sdk)
+* For RavelinCore, version 2 and above, note that authentication credentials are required for [Installation](#installing-the-ravelin-ios-sdk)
 
 If you have any questions on getting started, please ask us in your Ravelin support channel on Slack.
 
@@ -28,8 +28,8 @@ If you have any questions on getting started, please ask us in your Ravelin supp
 
 * [Minimum Requirements](#minimum-requirements)
 * [User Privacy](#user-privacy)
-* [Install](#installing-the-ravelin-ios-sdk)
-* [Update](#updating-the-ravelin-ios-sdk)
+* [Install](#installing-the-sdk)
+* [Update](#updating-the-sdk)
 * [Usage](#usage)
     * [Fingerprint location tracking](#fingerprint-location-tracking)
     * [Importing and configuring](#importing-and-configuring)
@@ -55,7 +55,7 @@ Although the Ravelin Core SDK collects device data, because the purpose is fraud
 * Data that their app or SDK collects and its purpose.
 * Required Reason APIs that their app or SDK uses and the reason for using them.
 
-Starting with version 1.1.2, the RavelinCore SDK includes a privacy manifest file and are also [digitally signed](https://developer.apple.com/documentation/xcode/verifying-the-origin-of-your-xcframeworks).
+Starting with version 1.1.2, RavelinCore includes a privacy manifest file and are also [digitally signed](https://developer.apple.com/documentation/xcode/verifying-the-origin-of-your-xcframeworks).
 
 In this respect, the SDK gathers the following data types to help prevent fraud:
 
@@ -67,7 +67,7 @@ In this respect, the SDK gathers the following data types to help prevent fraud:
 
 A detailed breakdown of the [privacy manifest](#privacy-manifest) as provided by the Ravelin Core SDK.
 
-## Installing the Ravelin iOS SDK
+## Installing the SDK
 
 The SDK is available via Cocoapods or Swift Package Manager(SPM).
 
@@ -96,7 +96,7 @@ Xcode will automatically detect the .netrc file and apply the required Authentic
 
 
 ### Using Keychain:
-As an alternative, you can also use Apple's Keychain to create a password item using the same credentials.
+As an alternative to a .netrc file entry, you can also use Apple's Keychain to create a password item using the same credentials.
 
 ### Installing via Cocoapods
 
@@ -110,7 +110,7 @@ Then, from the command line: `pod install`
 
 Add RavelinCore via Xcode, Add Package Dependency: a package manifest is available at: `git@github.com:unravelin/ravelin-core-ios-xcframework-distribution.git`
 
-## Updating the Ravelin iOS SDKs
+## Updating the SDK
 
 ### Updating via Cocoapods
 
@@ -160,7 +160,7 @@ import RavelinCore
 @import RavelinCore;
 ```
 
-The singleton Ravelin class should be accessed via the `sharedInstance` method. For RavelinCore SDK version 2 and above, a `shared` property is also available. You will first need to initialise the SDK with the `createInstance` method passing your Ravelin Publishable API Key. See the [Authentication](/api/authentication) for where to find this key. For RavelinCore SDK version 2 and above, there is an alternative, `configure` method.
+The singleton Ravelin class should be accessed via the `sharedInstance` method. For RavelinCore version 2 and above, a `shared` property is also available. You will first need to initialise the SDK with the `createInstance` method passing your Ravelin Publishable API Key. See the [Authentication](/api/authentication) for where to find this key. For RavelinCore version 2 and above, there is an alternative, `configure` method.
 
 **Please ensure you use your Publishable API Key. Your Secret API Key should never be embedded in your app -- it should only be used to send requests from your backend to api.ravelin.com.**
 
@@ -169,7 +169,7 @@ The singleton Ravelin class should be accessed via the `sharedInstance` method. 
 // Instantiation for tracking only
 let ravelin = Ravelin.createInstance("publishable_key_live_----")
 ```
-For RavelinCore SDK version 2 and above, there is a preferred/alternative way to create and configure the shared instance:
+For RavelinCore version 2 and above, there is a preferred/alternative way to create and configure the shared instance:
 ```swift
    /// Configure the singleton instance of the Ravelin sdk with your public key
     /// - Parameters:
@@ -215,13 +215,13 @@ self.ravelin = [Ravelin createInstance:@"publishable_key_live_----"];
 
 Once initialised, you can use the `sharedInstance` directly to access methods and properties.
 
-For RavelinCore SDK version 2 and above, a `shared` property is also available and the tyepealias 'RavelinSDK' can be used in place of 'Ravelin'.
+For RavelinCore version 2 and above, a `shared` property is also available and the tyepealias 'RavelinSDK' can be used in place of 'Ravelin'.
 
 **Swift**
 ```swift
 // Directly
 Ravelin.sharedInstance().methodName()
-// For RavelinCore SDK version 2
+// For RavelinCore version 2
 RavelinSDK.shared.methodName()
 ```
 
@@ -237,7 +237,7 @@ Alternatively, keep a reference to the shared instance:
 ```swift
 // Variable
 let ravelin = Ravelin.sharedInstance()
-// For RavelinCore SDK version 2
+// For RavelinCore version 2
 let ravelinSDK = RavelinSDK.shared
 ```
 
@@ -570,7 +570,7 @@ __NOTE:__ Track events have overload methods with completion handlers and will a
 ---
 ### End-to-end example
 
-Here is a simple end-to-end example of using the RavelinCore SDK within a View.
+Here is a simple end-to-end example of using the RavelinCore within a View.
 
 __NOTE:__ All Ravelin network methods are asynchronous. Completion blocks are provided so you can handle each request accordingly. The example code will not necessarily call each method sequentially and is for demonstration purposes only.
 
