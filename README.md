@@ -17,10 +17,7 @@ This repo provides some simple projects, showing the integration and usage of Ra
 
 ### Authentication
 
-Before you can integrate with the Ravelin mobile SDKs for iOS, you will need to:
-
-* Obtain valid API keys which are available in the Ravelin dashboard in the account menu under the Developer option
-* For RavelinCore, version 2 and above, note that authentication credentials are required for [Installation](#installing-the-ravelin-ios-sdk)
+Before you can integrate with the Ravelin mobile SDKs for iOS, you will need to obtain valid API keys which are available in the Ravelin dashboard in the account menu under the Developer option
 
 If you have any questions on getting started, please ask us in your Ravelin support channel on Slack.
 
@@ -71,33 +68,6 @@ A detailed breakdown of the [privacy manifest](#privacy-manifest) as provided by
 
 The SDK is available via Cocoapods or Swift Package Manager(SPM).
 
-Please note that, from version 2.0.0, access to the RavelinCore binary, referenced by either SPM or CocoaPods, requires authentication credentials that will be supplied to you by a Ravelin integrations engineer; to build via Xcode you can manage the authentication credentials either via a password entry in Keychain or a .netrc entry.
-
-### Using .netrc:
-The .netrc file generally resides in the user’s home directory (~/.netrc).
-
-See:
-https://www.gnu.org/software/inetutils/manual/html_node/The-_002enetrc-file.html
-
-Add an entry to .netrc:
-```
-machine ravelin.mycloudrepo.io
-  login <access key as the username>   
-  password <secret value as the password> 
-```
-For example:
-```
-machine ravelin.mycloudrepo.io
-  login 123e4567-e89b-12d3-a456-42665544   
-  password 4264454-f88d-17d3-c996-123e4567 
-```
-
-Xcode will automatically detect the .netrc file and apply the required Authentication header.
-
-
-### Using Keychain:
-As an alternative to a .netrc file entry, you can also use Apple's Keychain to create a password item using the same credentials.
-
 ### Installing via Cocoapods
 
 Add RavelinCore to your PodFile:
@@ -116,7 +86,7 @@ Add RavelinCore via Xcode, Add Package Dependency: a package manifest is availab
 
 In your PodFile change the version to the latest SDK version number.
 
-Use the Cocoapod command line and run  `pod update RavelinCore` (for deviceId, fingerprinting and tracking activity) to update the SDK with the new version.
+Use the Cocoapod command line and run  `pod update RavelinCore`.
 
 To verify the latest Ravelin SDK version check our [Release Notes section](#release-notes).
 
