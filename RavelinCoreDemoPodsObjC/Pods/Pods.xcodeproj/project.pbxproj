@@ -275,13 +275,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2E1E748E33EDCBEDC9E247B1515BC416 /* Debug */ = {
+		326C3AB9A9FF256281625AAF5D6CACA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9C34DD82AD12EF2D2A2A050559A1154 /* RavelinCore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,13 +458,14 @@
 			};
 			name = Release;
 		};
-		B7090CC9D910C6711EAE989FB499962D /* Release */ = {
+		E14328A5FD910345EB564339EC7879D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7143CE9DB632F326D212D9BA65FDB185 /* RavelinCore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -535,8 +537,8 @@
 		C7A58A698DD3F60764A57947374BBBBF /* Build configuration list for PBXAggregateTarget "RavelinCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E1E748E33EDCBEDC9E247B1515BC416 /* Debug */,
-				B7090CC9D910C6711EAE989FB499962D /* Release */,
+				326C3AB9A9FF256281625AAF5D6CACA9 /* Debug */,
+				E14328A5FD910345EB564339EC7879D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

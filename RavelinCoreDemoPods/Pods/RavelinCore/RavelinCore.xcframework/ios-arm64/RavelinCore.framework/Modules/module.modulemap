@@ -4,3 +4,8 @@ framework module RavelinCore {
 
   module * { export * }
 }
+
+module RavelinCore.Swift {
+  header "RavelinCore-Swift.h"
+  requires objc
+}

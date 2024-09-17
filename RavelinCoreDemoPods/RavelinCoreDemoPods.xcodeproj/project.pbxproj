@@ -3,16 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C8C2DA072671F91300115160 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2DA062671F91300115160 /* AppDelegate.swift */; };
-		C8C2DA0B2671F91300115160 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2DA0A2671F91300115160 /* ViewController.swift */; };
 		C8C2DA0E2671F91300115160 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C2DA0C2671F91300115160 /* Main.storyboard */; };
 		C8C2DA102671F91600115160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C2DA0F2671F91600115160 /* Assets.xcassets */; };
 		C8C2DA132671F91600115160 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C2DA112671F91600115160 /* LaunchScreen.storyboard */; };
-		C8C2DA1C2672026D00115160 /* UseRavelin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2DA1B2672026D00115160 /* UseRavelin.swift */; };
+		C8C7AC402C8768FB0026C80A /* SDKHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC3F2C8768580026C80A /* SDKHelper.swift */; };
+		C8C7AC442C876B7B0026C80A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC432C876B7B0026C80A /* ViewController.swift */; };
+		C8C7AC4C2C8898E50026C80A /* RavelinSDK+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC4B2C8898E50026C80A /* RavelinSDK+helper.swift */; };
+		C8C7AC542C889BE80026C80A /* RavelinSDK+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC532C889BE80026C80A /* RavelinSDK+utils.swift */; };
+		C8C7AC562C889C7C0026C80A /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC552C889C7C0026C80A /* ActivityIndicatorViewController.swift */; };
+		C8C7AC582C889D070026C80A /* UIViewController+addChildiVewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC572C889D070026C80A /* UIViewController+addChildiVewController.swift */; };
+		C8C7AC5A2C889D700026C80A /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC592C889D700026C80A /* Bundle+version.swift */; };
+		C8C7AC5E2C889E2B0026C80A /* Logger+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC5D2C889E2B0026C80A /* Logger+helper.swift */; };
 		C8DA21778D77AE4BFAD8D5E1 /* Pods_RavelinCoreDemoPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76CA8A3F7B6AF3BE1466E3EC /* Pods_RavelinCoreDemoPods.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +28,18 @@
 		83956556C9B456E0F513E5DA /* Pods-RavelinCoreDemoPods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RavelinCoreDemoPods.release.xcconfig"; path = "Target Support Files/Pods-RavelinCoreDemoPods/Pods-RavelinCoreDemoPods.release.xcconfig"; sourceTree = "<group>"; };
 		C8C2DA032671F91300115160 /* RavelinCoreDemoPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RavelinCoreDemoPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C2DA062671F91300115160 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8C2DA0A2671F91300115160 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C8C2DA0D2671F91300115160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8C2DA0F2671F91600115160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8C2DA122671F91600115160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8C2DA142671F91600115160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8C2DA1B2672026D00115160 /* UseRavelin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseRavelin.swift; sourceTree = "<group>"; };
+		C8C7AC3F2C8768580026C80A /* SDKHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKHelper.swift; sourceTree = "<group>"; };
+		C8C7AC432C876B7B0026C80A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8C7AC4B2C8898E50026C80A /* RavelinSDK+helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RavelinSDK+helper.swift"; sourceTree = "<group>"; };
+		C8C7AC532C889BE80026C80A /* RavelinSDK+utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RavelinSDK+utils.swift"; sourceTree = "<group>"; };
+		C8C7AC552C889C7C0026C80A /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
+		C8C7AC572C889D070026C80A /* UIViewController+addChildiVewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+addChildiVewController.swift"; sourceTree = "<group>"; };
+		C8C7AC592C889D700026C80A /* Bundle+version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
+		C8C7AC5D2C889E2B0026C80A /* Logger+helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Logger+helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				C8C2DA062671F91300115160 /* AppDelegate.swift */,
-				C8C2DA0A2671F91300115160 /* ViewController.swift */,
 				C8C2DA0C2671F91300115160 /* Main.storyboard */,
 				C8C2DA0F2671F91600115160 /* Assets.xcassets */,
 				C8C2DA112671F91600115160 /* LaunchScreen.storyboard */,
@@ -77,10 +88,25 @@
 		C8C2DA1A2672026D00115160 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				C8C2DA1B2672026D00115160 /* UseRavelin.swift */,
+				C8C7AC5F2C889EE30026C80A /* Utility */,
+				C8C7AC3F2C8768580026C80A /* SDKHelper.swift */,
+				C8C7AC4B2C8898E50026C80A /* RavelinSDK+helper.swift */,
+				C8C7AC532C889BE80026C80A /* RavelinSDK+utils.swift */,
+				C8C7AC432C876B7B0026C80A /* ViewController.swift */,
 			);
 			name = Shared;
 			path = ../Shared;
+			sourceTree = "<group>";
+		};
+		C8C7AC5F2C889EE30026C80A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C8C7AC552C889C7C0026C80A /* ActivityIndicatorViewController.swift */,
+				C8C7AC592C889D700026C80A /* Bundle+version.swift */,
+				C8C7AC5D2C889E2B0026C80A /* Logger+helper.swift */,
+				C8C7AC572C889D070026C80A /* UIViewController+addChildiVewController.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		F7F794A89A1F7B95A19F36FE /* Pods */ = {
@@ -215,9 +241,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8C2DA1C2672026D00115160 /* UseRavelin.swift in Sources */,
-				C8C2DA0B2671F91300115160 /* ViewController.swift in Sources */,
+				C8C7AC442C876B7B0026C80A /* ViewController.swift in Sources */,
+				C8C7AC402C8768FB0026C80A /* SDKHelper.swift in Sources */,
+				C8C7AC5E2C889E2B0026C80A /* Logger+helper.swift in Sources */,
+				C8C7AC542C889BE80026C80A /* RavelinSDK+utils.swift in Sources */,
+				C8C7AC582C889D070026C80A /* UIViewController+addChildiVewController.swift in Sources */,
+				C8C7AC562C889C7C0026C80A /* ActivityIndicatorViewController.swift in Sources */,
+				C8C7AC4C2C8898E50026C80A /* RavelinSDK+helper.swift in Sources */,
 				C8C2DA072671F91300115160 /* AppDelegate.swift in Sources */,
+				C8C7AC5A2C889D700026C80A /* Bundle+version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +401,7 @@
 				DEVELOPMENT_TEAM = 8SLW46D7RN;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = RavelinCoreDemoPods/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +424,7 @@
 				DEVELOPMENT_TEAM = 8SLW46D7RN;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = RavelinCoreDemoPods/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

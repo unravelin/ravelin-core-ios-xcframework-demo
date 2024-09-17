@@ -1,0 +1,225 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name RavelinCore
+import CommonCrypto
+import CoreLocation
+import CoreTelephony
+import Foundation
+import LocalAuthentication
+import MachO
+import Network
+import OSLog
+@_exported import RavelinCore
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackPage(_ pageTitle: Swift.String?)
+  @objc dynamic public func trackPage(_ pageTitle: Swift.String?, eventProperties: [Swift.String : Any]?)
+  @objc dynamic public func trackPage(_ pageTitle: Swift.String?, eventProperties: [Swift.String : Any]?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackPageLoadedEvent(_ pageTitle: Swift.String?, eventProperties: [Swift.String : Any]? = nil) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackViewContent(_ pageTitle: Swift.String?, contentType: Swift.String?)
+  @objc dynamic public func trackViewContent(_ pageTitle: Swift.String?, contentType: Swift.String?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackViewContentEvent(_ pageTitle: Swift.String?, contentType: Swift.String?) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackLanguageChange(_ pageTitle: Swift.String?, language: Swift.String?)
+  @objc dynamic public func trackLanguageChange(_ pageTitle: Swift.String?, language: Swift.String?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackLanguageChangeEvent(_ pageTitle: Swift.String?, language: Swift.String?) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackPaste(_ pageTitle: Swift.String?, pastedValue: Swift.String?)
+  @objc dynamic public func trackPaste(_ pageTitle: Swift.String?, pastedValue: Swift.String?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackPasteEvent(_ pageTitle: Swift.String?, pastedValue: Swift.String?) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackFingerprint()
+  @objc dynamic public func trackFingerprint(_ completionHandler: RavelinCore.TrackResponse?)
+  @objc dynamic public func trackFingerprint(_ customerId: Swift.String?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackFingerprint() async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackFingerprint(customerId: Swift.String?) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackRemoveFromCart(_ pageTitle: Swift.String?, itemName: Swift.String?, quantity: Foundation.NSNumber?)
+  @objc dynamic public func trackRemoveFromCart(_ pageTitle: Swift.String?, itemName: Swift.String?, quantity: Foundation.NSNumber?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackRemoveFromCartEvent(_ pageTitle: Swift.String?, itemName: Swift.String?, quantity: Foundation.NSNumber?) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackLogout(_ pageTitle: Swift.String?)
+  @objc dynamic public func trackLogout(_ pageTitle: Swift.String?, eventProperties: [Swift.String : Any]?)
+  @objc dynamic public func trackLogout(_ pageTitle: Swift.String?, eventProperties: [Swift.String : Any]?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackLogoutEvent(_ pageTitle: Swift.String?, eventProperties: [Swift.String : Any]? = nil) async throws
+  #endif
+}
+public typealias RVNCore = RavelinCore.Ravelin
+public typealias RavelinSDK = RavelinCore.Ravelin
+public typealias TrackResponse = (_ data: Foundation.Data?, _ response: Foundation.URLResponse?, _ error: (any Swift.Error)?) -> Swift.Void
+public typealias TrackResult = Swift.Result<Swift.Void, any Swift.Error>
+public typealias TrackResultResponse = (RavelinCore.TrackResult) -> Swift.Void
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(Ravelin) @objcMembers public class Ravelin : ObjectiveC.NSObject {
+  @objc deinit
+  @objc public static let shared: RavelinCore.Ravelin
+  @objc public static func sharedInstance() -> RavelinCore.Ravelin
+  @objc public var orderId: Swift.String? {
+    @objc get
+    @objc set(newId)
+  }
+  @objc public var customerId: Swift.String? {
+    @objc get
+    @objc set(newId)
+  }
+  @objc public var tempCustomerId: Swift.String? {
+    @objc get
+    @objc set(newId)
+  }
+  @objc public var customDeviceId: Swift.String? {
+    @objc get
+    @objc set(newId)
+  }
+  @objc public var appVersion: Swift.String? {
+    @objc get
+    @objc set(newId)
+  }
+  public var logLevel: RavelinCore.LogLevel {
+    get
+    set(newLevel)
+  }
+  @objc public var deviceId: Swift.String? {
+    @objc get
+  }
+  @objc public var sessionId: Swift.String? {
+    @objc get
+  }
+  @objc public var apiKey: Swift.String? {
+    @objc get
+  }
+  @objc public var eventsData: Foundation.Data? {
+    @objc get
+  }
+  @objc public func deleteEventsData()
+  @objc public class func createInstance(_ apiKey: Swift.String) -> RavelinCore.Ravelin
+  public func configure(apiKey: Swift.String, customerId: Swift.String?, tempCustomerId: Swift.String? = nil, orderId: Swift.String? = nil, customDeviceId: Swift.String? = nil, appVersion: Swift.String? = nil, logLevel: RavelinCore.LogLevel = .error, sendFingerprint: Swift.Bool = true, reset: Swift.Bool = false, completion: @escaping RavelinCore.TrackResultResponse)
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 13.0.0, *)
+  public func configure(apiKey: Swift.String, customerId: Swift.String?, tempCustomerId: Swift.String? = nil, orderId: Swift.String? = nil, customDeviceId: Swift.String? = nil, appVersion: Swift.String? = nil, logLevel: RavelinCore.LogLevel = .error, sendFingerprint: Swift.Bool = true, reset: Swift.Bool = false) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackSearch(_ pageTitle: Swift.String?, searchValue: Swift.String?)
+  @objc dynamic public func trackSearch(_ pageTitle: Swift.String?, searchValue: Swift.String?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackSearchEvent(_ pageTitle: Swift.String?, searchValue: Swift.String?) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackLogin(_ pageTitle: Swift.String?)
+  @objc dynamic public func trackLogin(_ pageTitle: Swift.String?, eventProperties: [Swift.String : Any]?)
+  @objc dynamic public func trackLogin(_ pageTitle: Swift.String?, eventProperties: [Swift.String : Any]?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackLoginEvent(_ pageTitle: Swift.String?, eventProperties: [Swift.String : Any]? = nil) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackCurrencyChange(_ pageTitle: Swift.String?, currency: Swift.String?)
+  @objc dynamic public func trackCurrencyChange(_ pageTitle: Swift.String?, currency: Swift.String?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackCurrencyChangeEvent(_ pageTitle: Swift.String?, currency: Swift.String?) async throws
+  #endif
+}
+public enum LogLevel : Swift.Int, Swift.RawRepresentable, Swift.Equatable, Swift.Hashable, Swift.CaseIterable {
+  case debug
+  case info
+  case error
+  case fault
+  case none
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int {
+    get
+  }
+  public var rawValue: RavelinCore.LogLevel.RawValue {
+    get
+  }
+  public init?(rawValue: RavelinCore.LogLevel.RawValue)
+  public typealias AllCases = [RavelinCore.LogLevel]
+  public static var allCases: [RavelinCore.LogLevel] {
+    get
+  }
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackRemoveFromWishlist(_ pageTitle: Swift.String?, itemName: Swift.String?)
+  @objc dynamic public func trackRemoveFromWishlist(_ pageTitle: Swift.String?, itemName: Swift.String?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackRemoveFromWishlistEvent(_ pageTitle: Swift.String?, itemName: Swift.String?) async throws
+  #endif
+}
+extension Swift.Result where Success == () {
+  public static var success: Swift.Result<(), Failure> {
+    get
+  }
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackAddToWishlist(_ pageTitle: Swift.String?, itemName: Swift.String?)
+  @objc dynamic public func trackAddToWishlist(_ pageTitle: Swift.String?, itemName: Swift.String?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackAddToWishlistEvent(_ pageTitle: Swift.String?, itemName: Swift.String?) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func track(_ pageTitle: Swift.String?, eventName: Swift.String?, eventProperties: [Swift.String : Any]?)
+  @objc dynamic public func track(_ pageTitle: Swift.String?, eventName: Swift.String?, eventProperties: [Swift.String : Any]?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackEvent(_ pageTitle: Swift.String?, eventName: Swift.String?, eventProperties: [Swift.String : Any]?) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackAddToCart(_ pageTitle: Swift.String?, itemName: Swift.String?, quantity: Foundation.NSNumber?)
+  @objc dynamic public func trackAddToCart(_ pageTitle: Swift.String?, itemName: Swift.String?, quantity: Foundation.NSNumber?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackAddToCartEvent(_ pageTitle: Swift.String?, itemName: Swift.String?, quantity: Foundation.NSNumber?) async throws
+  #endif
+}
+extension RavelinCore.Ravelin {
+  @objc dynamic public func trackSelectOption(_ pageTitle: Swift.String?, option: Swift.String?, optionValue: Swift.String?)
+  @objc dynamic public func trackSelectOption(_ pageTitle: Swift.String?, option: Swift.String?, optionValue: Swift.String?, completionHandler: RavelinCore.TrackResponse?)
+  #if compiler(>=5.3) && $AsyncAwait
+  @objc @available(iOS 13.0.0, *)
+  dynamic public func trackSelectOptionEvent(_ pageTitle: Swift.String?, option: Swift.String?, optionValue: Swift.String?) async throws
+  #endif
+}

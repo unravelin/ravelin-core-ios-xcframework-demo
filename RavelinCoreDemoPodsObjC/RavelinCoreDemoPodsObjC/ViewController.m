@@ -3,8 +3,8 @@
 //  RavelinCoreDemoPodsObjC
 
 #import "ViewController.h"
-#import <UIKit/UIKit.h>
-#import <RavelinCore/Ravelin.h>
+
+@import RavelinCore;
 @interface ViewController ()
 @property (strong, nonatomic) Ravelin *ravelin;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -16,17 +16,25 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.lightGrayColor;
     self.textField.delegate = self;
-    
-    // make Ravelin instance with api key
-    self.ravelin = [Ravelin
-                    createInstance:@"publishable_key_xxxxxx"];
 }
 
 - (IBAction)touchTrackButton:(id)sender {
-    // Setup customer info and track their login
-    self.ravelin.customerId = @"customer12345";
+    [self useCore];
+}
 
-    // Send a device fingerprint with a completion block (if required)
+- (void)useCore {
+
+    // Make Ravelin instance with API keys
+    // to assist with early stage development/debug
+    // execute 'python3 simple_server.py' in a terminal session
+    // and use "local" as the apiKey
+    // for further development and release, replace with your Ravelin Publishable API Key
+    // self.ravelin = [Ravelin createInstance:@"publishable_key_live_----"];
+    self.ravelin = [Ravelin createInstance:@"local"];
+
+    self.ravelin.customerId = @"customer012345";
+
+    // Send a device fingerprint with a completion block
     [self.ravelin trackFingerprint:^(NSData *data, NSURLResponse *response, NSError *error) {
         if(!error) {
             NSDictionary *responseData;
@@ -36,7 +44,7 @@
                 NSLog(@"trackFingerprint - success");
                 // track login
                 [self.ravelin trackLogin:@"login"];
-                self.ravelin.orderId = @"web-001";
+                self.ravelin.orderId = @"order-001";
                 // track customer moving to a new page
                 [self.ravelin trackPage:@"checkout"];
                 // track logout
@@ -57,13 +65,9 @@
     if(string.length <= 1) { return YES; }
     // Check if the textfield contains pasted text
     if([string containsString:[UIPasteboard generalPasteboard].string]) {
-        // Send paste event to Ravelin
-        NSString *pageTitle = @"home";
-        NSString *pasteLength = [NSString stringWithFormat:@"%ld", (long)[UIPasteboard generalPasteboard].string.length];
-        NSDictionary *meta = @{@"pasteLength": pasteLength};
-        [self.ravelin track:pageTitle eventName:@"paste" eventProperties:meta];
+        [self.ravelin trackPaste:@"home" pastedValue:string];
     }
-    
+
     return YES;
 }
 

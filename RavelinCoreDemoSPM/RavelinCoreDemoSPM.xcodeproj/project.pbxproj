@@ -8,23 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		C8C2DA072671F91300115160 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2DA062671F91300115160 /* AppDelegate.swift */; };
-		C8C2DA0B2671F91300115160 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2DA0A2671F91300115160 /* ViewController.swift */; };
 		C8C2DA0E2671F91300115160 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C2DA0C2671F91300115160 /* Main.storyboard */; };
 		C8C2DA102671F91600115160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C2DA0F2671F91600115160 /* Assets.xcassets */; };
 		C8C2DA132671F91600115160 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C2DA112671F91600115160 /* LaunchScreen.storyboard */; };
-		C8C2DA1F2672098C00115160 /* UseRavelin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2DA1E2672098C00115160 /* UseRavelin.swift */; };
-		C8C2DA22267209AA00115160 /* RavelinCore in Frameworks */ = {isa = PBXBuildFile; productRef = C8C2DA21267209AA00115160 /* RavelinCore */; };
+		C8C2DA1F2672098C00115160 /* SDKHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C2DA1E2672098C00115160 /* SDKHelper.swift */; };
+		C8C7AC422C876B4A0026C80A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC412C876B4A0026C80A /* ViewController.swift */; };
+		C8C7AC4A2C8898270026C80A /* RavelinSDK+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC492C8898270026C80A /* RavelinSDK+helper.swift */; };
+		C8C7AC522C889BDC0026C80A /* RavelinSDK+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC512C889BDC0026C80A /* RavelinSDK+utils.swift */; };
+		C8C7AC662C889FB60026C80A /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC602C889FB60026C80A /* ActivityIndicatorViewController.swift */; };
+		C8C7AC672C889FB60026C80A /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC612C889FB60026C80A /* Bundle+version.swift */; };
+		C8C7AC682C889FB60026C80A /* Logger+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC622C889FB60026C80A /* Logger+helper.swift */; };
+		C8C7AC6A2C889FB60026C80A /* UIViewController+addChildiVewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7AC642C889FB60026C80A /* UIViewController+addChildiVewController.swift */; };
+		C8D4BEA32C76122800FC71FC /* RavelinCore in Frameworks */ = {isa = PBXBuildFile; productRef = C8D4BEA22C76122800FC71FC /* RavelinCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C8C2DA032671F91300115160 /* RavelinCoreDemoSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RavelinCoreDemoSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C2DA062671F91300115160 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8C2DA0A2671F91300115160 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C8C2DA0D2671F91300115160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8C2DA0F2671F91600115160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8C2DA122671F91600115160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8C2DA142671F91600115160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8C2DA1E2672098C00115160 /* UseRavelin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseRavelin.swift; sourceTree = "<group>"; };
+		C8C2DA1E2672098C00115160 /* SDKHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKHelper.swift; sourceTree = "<group>"; };
+		C8C7AC412C876B4A0026C80A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8C7AC492C8898270026C80A /* RavelinSDK+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RavelinSDK+helper.swift"; sourceTree = "<group>"; };
+		C8C7AC512C889BDC0026C80A /* RavelinSDK+utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RavelinSDK+utils.swift"; sourceTree = "<group>"; };
+		C8C7AC602C889FB60026C80A /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
+		C8C7AC612C889FB60026C80A /* Bundle+version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
+		C8C7AC622C889FB60026C80A /* Logger+helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Logger+helper.swift"; sourceTree = "<group>"; };
+		C8C7AC642C889FB60026C80A /* UIViewController+addChildiVewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+addChildiVewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8C2DA22267209AA00115160 /* RavelinCore in Frameworks */,
+				C8D4BEA32C76122800FC71FC /* RavelinCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				C8C2DA062671F91300115160 /* AppDelegate.swift */,
-				C8C2DA0A2671F91300115160 /* ViewController.swift */,
 				C8C2DA0C2671F91300115160 /* Main.storyboard */,
 				C8C2DA0F2671F91600115160 /* Assets.xcassets */,
 				C8C2DA112671F91600115160 /* LaunchScreen.storyboard */,
@@ -72,10 +83,25 @@
 		C8C2DA1D2672098C00115160 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				C8C2DA1E2672098C00115160 /* UseRavelin.swift */,
+				C8C7AC652C889FB60026C80A /* Utility */,
+				C8C2DA1E2672098C00115160 /* SDKHelper.swift */,
+				C8C7AC492C8898270026C80A /* RavelinSDK+helper.swift */,
+				C8C7AC512C889BDC0026C80A /* RavelinSDK+utils.swift */,
+				C8C7AC412C876B4A0026C80A /* ViewController.swift */,
 			);
 			name = Shared;
 			path = ../Shared;
+			sourceTree = "<group>";
+		};
+		C8C7AC652C889FB60026C80A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C8C7AC602C889FB60026C80A /* ActivityIndicatorViewController.swift */,
+				C8C7AC612C889FB60026C80A /* Bundle+version.swift */,
+				C8C7AC622C889FB60026C80A /* Logger+helper.swift */,
+				C8C7AC642C889FB60026C80A /* UIViewController+addChildiVewController.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +121,7 @@
 			);
 			name = RavelinCoreDemoSPM;
 			packageProductDependencies = (
-				C8C2DA21267209AA00115160 /* RavelinCore */,
+				C8D4BEA22C76122800FC71FC /* RavelinCore */,
 			);
 			productName = RavelinCoreDemoPods;
 			productReference = C8C2DA032671F91300115160 /* RavelinCoreDemoSPM.app */;
@@ -126,7 +152,7 @@
 			);
 			mainGroup = C8C2D9FA2671F91300115160;
 			packageReferences = (
-				C8C2DA20267209AA00115160 /* XCRemoteSwiftPackageReference "ravelin-core-ios-xcframework-distribution" */,
+				C8D4BEA12C76122800FC71FC /* XCRemoteSwiftPackageReference "ravelin-core-ios-xcframework-distribution" */,
 			);
 			productRefGroup = C8C2DA042671F91300115160 /* Products */;
 			projectDirPath = "";
@@ -155,8 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8C2DA1F2672098C00115160 /* UseRavelin.swift in Sources */,
-				C8C2DA0B2671F91300115160 /* ViewController.swift in Sources */,
+				C8C7AC422C876B4A0026C80A /* ViewController.swift in Sources */,
+				C8C7AC682C889FB60026C80A /* Logger+helper.swift in Sources */,
+				C8C7AC662C889FB60026C80A /* ActivityIndicatorViewController.swift in Sources */,
+				C8C7AC6A2C889FB60026C80A /* UIViewController+addChildiVewController.swift in Sources */,
+				C8C7AC522C889BDC0026C80A /* RavelinSDK+utils.swift in Sources */,
+				C8C7AC672C889FB60026C80A /* Bundle+version.swift in Sources */,
+				C8C7AC4A2C8898270026C80A /* RavelinSDK+helper.swift in Sources */,
+				C8C2DA1F2672098C00115160 /* SDKHelper.swift in Sources */,
 				C8C2DA072671F91300115160 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SLW46D7RN;
 				INFOPLIST_FILE = RavelinCoreDemoSPM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,6 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SLW46D7RN;
 				INFOPLIST_FILE = RavelinCoreDemoSPM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,20 +397,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C8C2DA20267209AA00115160 /* XCRemoteSwiftPackageReference "ravelin-core-ios-xcframework-distribution" */ = {
+		C8D4BEA12C76122800FC71FC /* XCRemoteSwiftPackageReference "ravelin-core-ios-xcframework-distribution" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:unravelin/ravelin-core-ios-xcframework-distribution.git";
+			repositoryURL = "https://github.com/unravelin/ravelin-core-ios-xcframework-distribution";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C8C2DA21267209AA00115160 /* RavelinCore */ = {
+		C8D4BEA22C76122800FC71FC /* RavelinCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C8C2DA20267209AA00115160 /* XCRemoteSwiftPackageReference "ravelin-core-ios-xcframework-distribution" */;
+			package = C8D4BEA12C76122800FC71FC /* XCRemoteSwiftPackageReference "ravelin-core-ios-xcframework-distribution" */;
 			productName = RavelinCore;
 		};
 /* End XCSwiftPackageProductDependency section */
